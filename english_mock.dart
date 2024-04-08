@@ -14,11 +14,16 @@ class _EnglishMockReviewState extends State<EnglishMockReview> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('ListView Example'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('ListView Example'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
+      ),
         body: Container(
           padding: EdgeInsets.all(10),
           child: ListView.builder(
@@ -36,7 +41,6 @@ class _EnglishMockReviewState extends State<EnglishMockReview> {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          // Navigate to CollegeQuestReview page when the button is clicked
                           Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => Questreview(index: index)),
@@ -64,8 +68,7 @@ class _EnglishMockReviewState extends State<EnglishMockReview> {
             },
           ),
         ),
-      ),
-    );
+      );
   }
 }
 

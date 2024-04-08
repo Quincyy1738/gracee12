@@ -354,7 +354,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      // Navigate to the next page when English Mock is tapped
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => EnglishMockReview(index: 0)),
