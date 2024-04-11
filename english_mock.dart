@@ -291,8 +291,8 @@ class _QuestreviewState extends State<Questreview> {
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey, // Change background color
-                    textStyle: TextStyle(color: Colors.white), // Change text color
+                    backgroundColor: Colors.grey,
+                    textStyle: TextStyle(color: Colors.white),
                   ),
                   child: Text('Previous Question', style: TextStyle(fontSize: 16)),
                 ),
@@ -306,8 +306,8 @@ class _QuestreviewState extends State<Questreview> {
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey, // Change background color
-                    textStyle: TextStyle(color: Colors.white), // Change text color
+                    backgroundColor: Colors.grey,
+                    textStyle: TextStyle(color: Colors.white),
                   ),
                   child: Text('Next Question', style: TextStyle(fontSize: 16)),
                 ),
