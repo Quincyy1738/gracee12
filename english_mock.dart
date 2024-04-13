@@ -156,7 +156,8 @@ class _QuestreviewState extends State<Questreview> {
       appBar: AppBar(
         title: Text('Questreview'),
       ),
-      body: Column(
+    body: SingleChildScrollView(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -170,6 +171,12 @@ class _QuestreviewState extends State<Questreview> {
               ),
             ),
           ),
+          Container(
+            width: 200,
+            height: 200,
+            child: Image.asset('lib/assets/book 1.png'),
+          ),
+          SizedBox(height: 80),
           if (widget.index == 0 || widget.index == 1|| widget.index == 2|| widget.index == 3|| widget.index == 4|| widget.index == 5|| widget.index == 6|| widget.index == 7|| widget.index == 8|| widget.index == 9) ...[
             ElevatedButton(
               onPressed: () {
@@ -184,7 +191,8 @@ class _QuestreviewState extends State<Questreview> {
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Text(
-                    'A. Clotheful',
+                    'A. Clotheful\n\n'
+                        'The word Clotheful" is not a correct word form. The correct word forms are "Clothing" (noun form), "Clothed" (past participle form), and "Clothe" (verb form). "Clotheful" is not a recognized word in the English language.\n',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                   ),
@@ -195,7 +203,8 @@ class _QuestreviewState extends State<Questreview> {
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Text(
-                    'C. Were you doing',
+                    'C. Were you doing\n\n'
+                        'The correct answer is "were you doing". This is the correct form of the question in past continuous tense. It is asking about the action or activity that the person was engaged in at the time of the call.',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                   ),
@@ -206,7 +215,20 @@ class _QuestreviewState extends State<Questreview> {
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Text(
-                    'B. Gets',
+                    'B. Gets\n\n'
+                        'When the boss is away, nothing "gets" done means that no work or tasks are accomplished in the absence of the boss. The word "gets" implies that there is a lack of productivity or progress during this time.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            if (showAdditionalText && widget.index == 3)
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Center(
+                  child: Text(
+                    'C.Until\n\n'
+                        'The word "until" is the correct answer because it indicates a specific point in time when the action of using the car will end. It implies that the car will be available for use up to a certain time tomorrow, but not after that time.',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                   ),
@@ -217,7 +239,8 @@ class _QuestreviewState extends State<Questreview> {
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Text(
-                    'B. Gets',
+                    'B. Cajole\n\n'
+                        '"Cajole" means to persuade someone through flattery, coaxing, or sweet talk.',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                   ),
@@ -228,7 +251,8 @@ class _QuestreviewState extends State<Questreview> {
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Text(
-                    'B. Gets',
+                    'B. To improve or make better\n\n'
+                        '"Ameliorate" means to make something better or improve a situation.',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                   ),
@@ -239,7 +263,8 @@ class _QuestreviewState extends State<Questreview> {
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Text(
-                    'B. Gets',
+                    'A. Apathy\n\n'
+                        '"Apathy" refers to a lack of interest, concern, or enthusiasm.',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                   ),
@@ -250,18 +275,21 @@ class _QuestreviewState extends State<Questreview> {
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Text(
-                    'B. Gets',
+                    'A. was so bored\n\n'
+                        'The correct word should be "boring" instead of "bored." The correct sentence would be: "The movie was so boring that most of the audience left before it ended."',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                   ),
                 ),
+
               ),
             if (showAdditionalText && widget.index == 8)
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Text(
-                    'B. Gets',
+                    ' B. Meticulous\n\n'
+                        'The correct spelling is "Meticulous." It means showing great attention to detail; very careful and precise.',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                   ),
@@ -272,51 +300,56 @@ class _QuestreviewState extends State<Questreview> {
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Text(
-                    'B. Gets',
+                    'A.Coalesce\n\n'
+                        'The correct spelling is "Coalesce." It means to come together and form one mass or whole.',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ElevatedButton(
-                  onPressed: () {
-                    if (widget.index > 0) {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => Questreview(index: widget.index - 1)),
-                      );
-                    }
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey,
-                    textStyle: TextStyle(color: Colors.white),
-                  ),
-                  child: Text('Previous Question', style: TextStyle(fontSize: 16)),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    if (widget.index < 9) {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => Questreview(index: widget.index + 1)),
-                      );
-                    }
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey,
-                    textStyle: TextStyle(color: Colors.white),
-                  ),
-                  child: Text('Next Question', style: TextStyle(fontSize: 16)),
-                ),
-              ],
-            ),
+            // ...
           ],
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  if (widget.index > 0) {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Questreview(index: widget.index - 1)),
+                    );
+                  }
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.grey,
+                  textStyle: TextStyle(color: Colors.white),
+                ),
+                child: Text('Previous Question', style: TextStyle(fontSize: 16)),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  if (widget.index < 9) {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Questreview(index: widget.index + 1)),
+                    );
+                  }
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.grey,
+                  textStyle: TextStyle(color: Colors.white),
+                ),
+                child: Text('Next Question', style: TextStyle(fontSize: 16)),
+              ),
+            ],
+          ),
+          SizedBox(height: 80),
         ],
       ),
+    ),
     );
+
   }
 }
 
